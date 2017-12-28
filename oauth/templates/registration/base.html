@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{{ website.title }}{% endblock %}</title>
+		<!-- Description, Keywords and Author -->
+		<meta name="description" content="{{ website.description }}">
+		<meta name="keywords" content="{{ website.keyword }}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<!-- Bootstrap CSS -->
+        <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font awesome CSS -->
+		<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+		<!-- Main CSS -->
+		<link href="{% static 'css/sign.css' %}" rel="stylesheet">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'img/main.ico' %}">
+	</head>
+
+	<body>
+
+    {% block body %}
+    {% endblock %}
+
+		<!-- Javascript files -->
+		<!-- jQuery -->
+		<script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+		<!-- Placeholder JS -->
+		<script src="//cdn.bootcss.com/placeholders/4.0.1/placeholders.min.js"></script>
+		<!-- Refresh Captcha JS -->
+		<script type="text/javascript" src="{% static "js/refresh.js" %}"></script>
+	</body>
+</html>

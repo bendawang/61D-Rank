@@ -1,0 +1,13 @@
+{% extends "framework.html" %}
+{% block content %}
+    <div class="container">
+        <div class="start-template">
+            <h2>Welcome</h2>
+        </div>
+        {% if request.user.is_authenticated %}
+        <div class="lead">
+            <h3>Successful! welcome,{{request.user.nickname}}</h3>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

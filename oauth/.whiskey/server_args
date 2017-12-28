@@ -1,0 +1,4 @@
+--working-directory .
+--application-type module
+--url-alias /static oauth/static_cdn
+oauth.wsgi
